@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ni.edu.uca.naverickgonzalez.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="ni.edu.uca.naverickgonzalez.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/inssFragment"
+        android:name="ni.edu.uca.naverickgonzalez.InssFragment"
+        android:label="fragment_inss"
+        tools:layout="@layout/fragment_inss" />
+    <fragment
+        android:id="@+id/notaFragment"
+        android:name="ni.edu.uca.naverickgonzalez.NotaFragment"
+        android:label="fragment_nota"
+        tools:layout="@layout/fragment_nota" />
+</navigation>
