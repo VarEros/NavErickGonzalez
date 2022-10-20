@@ -22,6 +22,12 @@
         <action
             android:id="@+id/action_menuFragment_to_inssFragment"
             app:destination="@id/inssFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_notaFragment"
+            app:destination="@id/notaFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_becaFragment"
+            app:destination="@id/becaFragment" />
     </fragment>
     <fragment
         android:id="@+id/inssFragment"
@@ -33,4 +39,9 @@
         android:name="ni.edu.uca.naverickgonzalez.NotaFragment"
         android:label="fragment_nota"
         tools:layout="@layout/fragment_nota" />
+    <fragment
+        android:id="@+id/becaFragment"
+        android:name="ni.edu.uca.naverickgonzalez.BecaFragment"
+        android:label="fragment_beca"
+        tools:layout="@layout/fragment_beca" />
 </navigation>
