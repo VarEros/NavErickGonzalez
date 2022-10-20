@@ -36,10 +36,9 @@ class InssFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnCalcular.setOnClickListener {
-            val salNeto = binding.etSalario.toString().toDouble()
-            val salario = Salario(salNeto,0.07,0.0, 0.0)
-            salario.calcularSalario()
-            binding.tvMaterial.text = "Tiene que pagar ${salario.aPagar}C$ al INSS \n Su salario final seria de ${salario.salFin}C$"
+            val salNeto = binding.etSalario.text.toString().toDouble()
+            val salario = Salario(salNeto)
+            binding.tvMaterial.text = "Tiene que pagar ${String.format("%.2f", salario.aPagar)}C$ al INSS \n Su salario final seria de ${String.format("%.2f", salario.salFin)}C$"
         }
     }
 }

@@ -18,7 +18,11 @@
         android:id="@+id/menuFragment"
         android:name="ni.edu.uca.naverickgonzalez.MenuFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_inssFragment"
+            app:destination="@id/inssFragment" />
+    </fragment>
     <fragment
         android:id="@+id/inssFragment"
         android:name="ni.edu.uca.naverickgonzalez.InssFragment"

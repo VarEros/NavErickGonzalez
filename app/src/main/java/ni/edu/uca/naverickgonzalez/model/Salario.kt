@@ -1,13 +1,15 @@
 package ni.edu.uca.naverickgonzalez.model
 
+import java.math.RoundingMode
+
 class Salario(
-    val salNeto: Double,
-    val impInss: Double,
-    var salFin: Double,
-    var aPagar: Double
+    salNeto: Double,
         ) {
-    fun calcularSalario() {
-        this.salFin = this.salNeto*this.impInss
-        this.aPagar = this.salFin-this.salNeto
-    }
+    val impInss = 0.7
+    val salFin = redondear(salNeto*impInss)
+    val aPagar = redondear(salNeto-salFin)
+}
+
+private fun redondear(don: Double) : Double {
+    return don.toBigDecimal().setScale(2, RoundingMode.UP).toDouble()
 }

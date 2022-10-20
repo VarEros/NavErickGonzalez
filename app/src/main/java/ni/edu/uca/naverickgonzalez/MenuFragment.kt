@@ -40,7 +40,9 @@ class MenuFragment : Fragment() {
             btnInss.setOnClickListener {
                 findNavController().navigate(R.id.inssFragment)
             }
-
+            btnNota.setOnClickListener {
+                findNavController().navigate(R.id.notaFragment)
+            }
         }
     }
 
