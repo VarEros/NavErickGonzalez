@@ -42,8 +42,7 @@ class BecaFragment : Fragment() {
     }
 
     private fun calcularBeca(prom: Double): String {
-        val num = round(prom).toInt()
-        return when (num) {
+        return when (round(prom).toInt()) {
             in 85..89 -> "El estudiante puede optar a una beca del 25%."
             in 90..94 -> "El estudiante puede optar a una beca del 50%."
             in 95..99 -> "El estudiante puede optar a una beca del 75%."

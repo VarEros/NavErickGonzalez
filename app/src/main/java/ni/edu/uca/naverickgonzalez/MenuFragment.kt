@@ -38,5 +38,4 @@ class MenuFragment : Fragment() {
             }
         }
     }
-
 }
